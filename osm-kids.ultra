@@ -1,0 +1,41 @@
+---
+style:
+  layers:
+    - type: symbol
+      icon-image:
+        - case
+        - [ ==, [ get, amenity ], school ]
+        - emoji:school
+        - [ ==, [ get, amenity ], fire_station ]
+        - emoji:fire_engine
+        - [ ==, [ get, amenity ], playground ]
+        - emoji:playground_slide
+        - [ ==, [ get, tourism ], zoo ]
+        - emoji:tiger
+        - [ ==, [ get, tourism ], aquarium ]
+        - emoji:fish
+        - emoji:question
+      symbol-sort-key:
+        - case
+        - [ ==, [ get, amenity ], school ]
+        - 30
+        - [ ==, [ get, amenity ], playground ]
+        - 20
+        - [ ==, [ get, amenity ], fire_station ]
+        - 17
+        - [ ==, [ get, tourism ], zoo ]
+        - 10
+        - [ ==, [ get, tourism ], aquarium ]
+        - 15
+        - 100
+  extends: https://styles.trailsta.sh/maptiler-basic.json
+---
+[bbox:{{bbox}}];
+(
+nwr[amenity=school];
+nwr[amenity=playground];
+nwr[amenity=fire_station];
+nwr[tourism=zoo];
+nwr[tourism=aquarium];
+);
+out center;

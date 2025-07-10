@@ -1,0 +1,111 @@
+---
+style:
+  layers:
+    - type: symbol
+      icon-image:
+        - case
+        - [ ==, [ get, playground ], slide]
+        - emoji:playground_slide
+        - [ ==, [ get, playground ], structure]
+        - emoji:house
+        - [ ==, [ get, playground ], splash_pad]
+        - emoji:fountain
+        - [ ==, [ get, playground ], sandpit]
+        - emoji:beach_with_umbrella
+        - [ ==, [ get, playground ], musical_instrument]
+        - emoji:musical_note
+        - [ ==, [ get, playground ], zipwire]
+        - emoji:aerial_tramwway
+        - [ ==, [ get, playground], swing]
+        - emoji:left_right_arrow
+        - [ ==, [ get, playground], basketswing]
+        - emoji:left_right_arrow
+        - [ ==, [ get, playground], tire_swing]
+        - emoji:left_right_arrow
+        - [ ==, [ get, playground], rope_swing]
+        - emoji:left_right_arrow
+        - [ ==, [ get, playground], baby_swing]
+        - emoji:baby
+        - [ ==, [ get, playground], climbingframe]
+        - emoji:woman_climbing
+        - [ ==, [ get, playground], climbingwall]
+        - emoji:woman_climbing
+        - [ ==, [ get, playground], climbing_slope]
+        - emoji:woman_climbing
+        - [ ==, [ get, playground], climbing_pole]
+        - emoji:woman_climbing
+        - [ ==, [ get, playground], climbing_rope]
+        - emoji:woman_climbing
+        - [ ==, [ get, playground], monkey_bars]
+        - emoji:monkey
+        - [ ==, [ get, playground ], roundabout]
+        - emoji:arrows_clockwise
+        - [ ==, [ get, playground ], basketrotator]
+        - emoji:arrows_clockwise
+        - [ ==, [ get, playground ], aerialrotator]
+        - emoji:arrows_clockwise
+        - [ ==, [ get, playground ], spinner]
+        - emoji:arrows_clockwise
+        - [ ==, [ get, playground ], spinning_disc]
+        - emoji:arrows_clockwise
+        - [ ==, [ get, playground ], spinning_circle]
+        - emoji:arrows_clockwise
+        - [ ==, [ get, playground ], spinner_bowl]
+        - emoji:arrows_clockwise
+        - [ ==, [ get, playground ], rotator]
+        - emoji:arrows_clockwise
+        - [ ==, [ get, playground ], balancebeam]
+        - emoji:scales
+        - [ ==, [ get, playground ], agility_trail]
+        - emoji:scales
+        - [ ==, [ get, playground ], rope_traverse]
+        - emoji:scales
+        - [ ==, [ get, playground ], stepping_stone]
+        - emoji:scales
+        - [ ==, [ get, playground ], stepping_post]
+        - emoji:scales
+        - [ ==, [ get, sport ], basketball]
+        - emoji:basketball
+        - [ ==, [ get, sport ], soccer]
+        - emoji:soccer
+        - [ ==, [ get, sport ], baseball]
+        - emoji:baseball
+        - [ ==, [ get, sport ], softball]
+        - emoji:baseball
+        - [ ==, [ get, sport ], cycling]
+        - emoji:woman-biking
+        - [ ==, [ get, sport ], tennis]
+        - emoji:tennis
+        - [ ==, [ get, sport ], pickleball]
+        - emoji:table_tennis_paddle_and_ball
+        - [ ==, [ get, sport ], volleyball]
+        - emoji:volleyball
+        - [ ==, [ get, sport ], beachvolleyball]
+        - emoji:volleyball
+        - [ ==, [ get, sport ], swimming]
+        - emoji:woman-swimming
+        - [ ==, [ get, leisure], pitch]
+        - emoji:athletic_shoe
+        - [ ==, [ get, sport ], climbing]
+        - emoji:woman_climbing
+        - [ ==, [ get, leisure ], track]
+        - emoji:woman-running
+        - [ ==, [ get, amenity ], toilets]
+        - emoji:toilet
+        - [ ==, [ get, amenity], drinking_water]
+        - emoji:potable_water
+        - [ ==, [ get, amenity], waste_basket]
+        - emoji:wastebasket
+        - emoji:question
+  extends: https://styles.trailsta.sh/maptiler-basic.json
+---
+[bbox:{{bbox}}];
+(
+nwr[playground];
+nwr[sport][sport!=golf];
+nwr[leisure=track];
+nwr[amenity=toilets];
+nwr[amenity=waste_basket];
+nwr[amenity=drinking_water];
+);
+out center;
