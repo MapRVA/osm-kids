@@ -11,7 +11,11 @@ style:
         - emoji:school
         - [ ==, [ get, amenity ], fire_station ]
         - emoji:fire_engine
-        - [ ==, [ get, amenity ], playground ]
+        - [ ==, [ get, amenity ], ice_cream ]
+        - emoji:ice_cream
+        - [ ==, [ get, amenity ], library ]
+        - emoji:books
+        - [ ==, [ get, leisure ], playground ]
         - emoji:playground_slide
         - [ ==, [ get, tourism ], zoo ]
         - emoji:tiger
@@ -35,10 +39,12 @@ style:
 ---
 [bbox:{{bbox}}];
 (
-nwr[amenity=school];
-nwr[amenity=playground];
-nwr[amenity=fire_station];
-nwr[tourism=zoo];
-nwr[tourism=aquarium];
+  nwr[amenity=school];
+  nwr[leisure=playground];
+  nwr[amenity=ice_cream];
+  nwr[amenity=library];
+  nwr[amenity=fire_station];
+  nwr[tourism=zoo];
+  nwr[tourism=aquarium];
 );
 out center;
