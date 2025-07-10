@@ -1,7 +1,45 @@
 ---
 title: OSM Kids!
 controls:
+  - type: HTMLControl
+    position: top-left
+    options:
+      html: |
+        <div class="infobox">
+        <h1>OSM Kids!</h1>
+        <details>
+          <summary>Legend</summary>
+          🐟 Aquariums
+          <br>
+          🚒 Fire Stations
+          <br>
+          🍨 Ice Cream Shops
+          <br>
+          📚 Libraries
+          <br>
+          🛝 Playgrounds
+          <br>
+          🏫 Schools
+          <br>
+          🐯 Zoos
+        </details>
+        </div>
+      css: |
+        .infobox {
+          background: white;
+          padding: 1em;
+          margin: 1em;
+          pointer-events: all;
+        }
+        details { 
+          margin: 1em;
+        }
   - type: ReloadControl
+  - type: GeolocateControl
+    options:
+      positionOptions:
+        enableHighAccuracy: true
+      trackUserLocation: true
 style:
   layers:
     - type: symbol
@@ -39,12 +77,12 @@ style:
 ---
 [bbox:{{bbox}}];
 (
-  nwr[amenity=school];
-  nwr[leisure=playground];
-  nwr[amenity=ice_cream];
-  nwr[amenity=library];
-  nwr[amenity=fire_station];
-  nwr[tourism=zoo];
-  nwr[tourism=aquarium];
+nwr[amenity=school];
+nwr[leisure=playground];
+nwr[amenity=ice_cream];
+nwr[amenity=library];
+nwr[amenity=fire_station];
+nwr[tourism=zoo];
+nwr[tourism=aquarium];
 );
 out center;
