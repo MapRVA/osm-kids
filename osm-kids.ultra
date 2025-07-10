@@ -1,4 +1,7 @@
 ---
+title: OSM Kids!
+controls:
+  - type: ReloadControl
 style:
   layers:
     - type: symbol
