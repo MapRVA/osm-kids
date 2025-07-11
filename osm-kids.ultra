@@ -13,6 +13,8 @@ controls:
           <br>
           📗 Book Stores
           <br>
+          🍬 Candy Store
+          <br>
           🚒 Fire Stations
           <br>
           🍦 Ice Cream Shops
@@ -86,7 +88,7 @@ style:
         - [ ==, [ get, shop ], books ]
         - emoji:green_book
         - [ ==, [ get, shop ], confectionery ]
-        - emoji:lollipop
+        - emoji:candy
         - [ ==, [ get, leisure ], swimming_pool ]
         - emoji:swimmer
         - emoji:question
