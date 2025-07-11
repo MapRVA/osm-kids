@@ -14,4 +14,4 @@ It is currently an [Ultra](https://overpass-ultra.us)-powered prototype.
 
 ### View the map!
 
-https://ultra.trailsta.sh/#map&query=url:https://dschep.github.io/osm-kids/osm-kids.ultra&m=12.64/37.53766/-77.45838
+https://dschep.github.io/osm-kids/
