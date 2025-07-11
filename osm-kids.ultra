@@ -13,7 +13,7 @@ controls:
           <br>
           🚒 Fire Stations
           <br>
-          🍨 Ice Cream Shops
+          🍦 Ice Cream Shops
           <br>
           📚 Libraries
           <br>
@@ -50,7 +50,7 @@ style:
         - [ ==, [ get, amenity ], fire_station ]
         - emoji:fire_engine
         - [ ==, [ get, amenity ], ice_cream ]
-        - emoji:ice_cream
+        - emoji:icecream
         - [ ==, [ get, amenity ], library ]
         - emoji:books
         - [ ==, [ get, leisure ], playground ]
