@@ -1,5 +1,7 @@
 ---
 title: OSM Kids!
+options: 
+  hash: m
 controls:
   - type: HTMLControl
     position: top-left
