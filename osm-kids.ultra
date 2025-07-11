@@ -21,6 +21,8 @@ controls:
           <br>
           🏫 Schools
           <br>
+          🏛️ Museums
+          <br>
           🐯 Zoos
         </details>
         </div>
@@ -47,6 +49,8 @@ style:
         - case
         - [ ==, [ get, amenity ], school ]
         - emoji:school
+        - [ ==, [ get, amenity ], kindergarten ]
+        - emoji:school
         - [ ==, [ get, amenity ], fire_station ]
         - emoji:fire_engine
         - [ ==, [ get, amenity ], ice_cream ]
@@ -59,6 +63,8 @@ style:
         - emoji:tiger
         - [ ==, [ get, tourism ], aquarium ]
         - emoji:fish
+        - [ ==, [ get, tourism ], museum ]
+        - emoji:classical_building
         - emoji:question
       symbol-sort-key:
         - case
@@ -78,11 +84,13 @@ style:
 [bbox:{{bbox}}];
 (
 nwr[amenity=school];
+nwr[amenity=kindergarten];
 nwr[leisure=playground];
 nwr[amenity=ice_cream];
 nwr[amenity=library];
 nwr[amenity=fire_station];
 nwr[tourism=zoo];
 nwr[tourism=aquarium];
+nwr[tourism=museum][museum=children];
 );
 out center;
