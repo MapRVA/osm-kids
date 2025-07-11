@@ -4,7 +4,7 @@ An [OpenStreetMap](https://openstreetmap.org)-powered map for kids! Featuring:
 
  * :fish: Aquariums
  * :fire_engine: Fire Stations
- * :ice_cream: Ice Cream Shops
+ * :icecream: Ice Cream Shops
  * :books: Libraries
  * :playground_slide: Playgrounds
  * :school: Schools
