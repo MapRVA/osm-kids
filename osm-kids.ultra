@@ -59,6 +59,8 @@ controls:
         enableHighAccuracy: true
       trackUserLocation: true
 style:
+  projection:
+    type: globe
   layers:
     - type: symbol
       source-layer: places
