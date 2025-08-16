@@ -1,0 +1,7 @@
+node_modules/ dist/
+*.pmtiles
+*.mbtiles
+tile_weights.tsv.gz
+sources/
+node_modules/
+dist/
