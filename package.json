@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "ultra build osm-kids.ultra",
-    "build:tiles": "docker run -v \"$(pwd)\":/data ghcr.io/onthegomap/planetiler:latest generate-custom --schema=/data/osm-kids.planetiler.yml --output /data/osm-kids.pmtiles"
+    "build:tiles": "docker run -v \"$(pwd)\":/data ghcr.io/onthegomap/planetiler:latest generate-custom --schema=/data/osm-kids.planetiler.yml --output /data/osm-kids.pmtiles",
+    "build:tiles:sudo": "sudo docker run -v \"$(pwd)\":/data ghcr.io/onthegomap/planetiler:latest generate-custom --schema=/data/osm-kids.planetiler.yml --output /data/osm-kids.pmtiles"
   },
   "author": "",
   "license": "ISC",
