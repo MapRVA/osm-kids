@@ -2,6 +2,7 @@
 title: OSM Kids!
 options: 
   hash: m
+type: vector
 controls:
   - type: HTMLControl
     position: top-left
@@ -13,9 +14,9 @@ controls:
           <summary>Legend</summary>
           🐟 Aquariums
           <br>
-          📗 Book Stores
+          📗 Book Shops
           <br>
-          🍬 Candy Store
+          🍬 Candy Shops
           <br>
           🚒 Fire Stations
           <br>
@@ -29,11 +30,13 @@ controls:
           <br>
           🏊 Pools
           <br>
-          🎢 Roller Coasters
+          🎡 Theme Parks
           <br>
           🏫 Schools
           <br>
-          🚆 Train Stations
+          🧸 Toy Shops
+          <br>
+          🚂 Train Stations
           <br>
           🏛️ Museums
           <br>
@@ -50,89 +53,82 @@ controls:
         details { 
           margin: 1em;
         }
-  - type: ReloadControl
   - type: GeolocateControl
     options:
       positionOptions:
         enableHighAccuracy: true
       trackUserLocation: true
 style:
+  projection:
+    type: globe
   layers:
     - type: symbol
+      source-layer: places
+      symbol-sort-key: [get, sort]
+      text-field: '{name}'
+      text-halo-color: '#e8e5d8'
+      text-halo-width: 2 
+      text-justify: auto
+      text-radial-offset: 1
+      text-optional: true
+      text-variable-anchor:
+        - left
+        - right
+        - top-left
+        - bottom-left
+        - top-right
+        - bottom-right
       icon-image:
-        - case
-        - [ ==, [ get, amenity ], school ]
+        - match
+        - [get, type]
+        - country
+        - - image
+          - - concat
+            - 'emoji:flag-'
+            - - downcase
+              - - coalesce
+                - [ get, ISO3166-1:alpha2 ]
+                - [ get, ISO3166-1 ]
+                - [ get, country_code_iso3166_1_alpha_2 ]
+        - city
+        - emoji:cityscape
+        - [ school, kindergarten ]
         - emoji:school
-        - [ ==, [ get, amenity ], kindergarten ]
-        - emoji:school
-        - [ ==, [ get, amenity ], fire_station ]
+        - fire_station
         - emoji:fire_engine
-        - [ ==, [ get, amenity ], ice_cream ]
+        - ice_cream
         - emoji:icecream
-        - [ ==, [ get, amenity ], library ]
+        - library
         - emoji:orange_book
-        - [ ==, [ get, attraction ], roller_coaster ]
-        - emoji:roller_coaster
-        - [ ==, [ get, amenity ], public_bookcase ]
+        - theme_park
+        - emoji:ferris_wheel
+        - public_bookcase
         - emoji:blue_book
-        - [ ==, [ get, leisure ], playground ]
+        - playground
         - emoji:playground_slide
-        - [ ==, [ get, tourism ], zoo ]
+        - zoo
         - emoji:tiger
-        - [ ==, [ get, tourism ], aquarium ]
+        - aquarium
         - emoji:fish
-        - [ ==, [ get, tourism ], museum ]
+        - [ museum ]
         - emoji:classical_building
-        - [ ==, [ get, railway ], station ]
-        - emoji:train2
-        - [ ==, [ get, shop ], toys ]
+        - [ station ]
+        - emoji:steam_locomotive
+        - [ toys ]
         - emoji:teddy_bear
-        - [ ==, [ get, shop ], books ]
+        - [ books ]
         - emoji:green_book
-        - [ ==, [ get, shop ], confectionery ]
+        - [ confectionery ]
         - emoji:candy
-        - [ ==, [ get, leisure ], swimming_pool ]
+        - [ swimming_pool ]
         - emoji:swimmer
         - emoji:question
-      symbol-sort-key:
-        - case
-        - [ ==, [ get, amenity ], school ]
-        - 30
-        - [ ==, [ get, amenity ], playground ]
-        - 20
-        - [ ==, [ get, amenity ], fire_station ]
-        - 17
-        - [ ==, [ get, tourism ], zoo ]
-        - 10
-        - [ ==, [ get, tourism ], aquarium ]
-        - 15
-        - [ ==, [ get, amenity ], public_bookcase ]
-        - 101
-        - 100
       icon-size:
-        - case
-        - [ ==, [ get, amenity ], public_bookcase ]
+        - match
+        - [ get, type ]
+        - public_bookcase
         - .5
         - 1
   extends: https://styles.trailsta.sh/maptiler-basic.json
 ---
-[bbox:{{bbox}}];
-(
-nwr[amenity=ice_cream];
-nwr[amenity=kindergarten];
-nwr[amenity=school];
-nwr[amenity=library];
-nwr[amenity=fire_station];
-nwr[amenity=public_bookcase];
-nwr[attraction=roller_coaster];
-nwr[leisure=playground];
-nwr[leisure=swimming_pool][access=yes];
-nwr[railway=station];
-nwr[shop=books];
-nwr[shop=confectionery];
-nwr[shop=toys];
-nwr[tourism=zoo];
-nwr[tourism=aquarium];
-nwr[tourism=museum][museum=children];
-);
-out center;
+pmtiles://https://files.trailstash.net/osm-kids.pmtiles

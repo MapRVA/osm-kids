@@ -1,0 +1,224 @@
+schema_name: OSM Kids
+schema_description: Vector tiles for the OSM Kids overlay
+attribution: <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy;
+  OpenStreetMap contributors</a>
+sources:
+  osm:
+    type: osm
+    local_path: /data/planet-latest.osm.pbf
+    # url: geofabrik:us/virginia
+tag_mappings:
+  sort: long
+layers:
+- id: places
+  features:
+    # Late High zoom
+    - source: osm
+      geometry: centroid
+      min_zoom: 14
+      include_when:
+        amenity: public_bookcase
+      attributes:
+      - key: sort
+        value: 100
+      - key: type
+        value: public_bookcase
+    # Mid High zoom
+    - source: osm
+      geometry: centroid
+      min_zoom: 13
+      include_when:
+        leisure: playground
+      attributes:
+      - key: sort
+        value: 95
+      - key: type
+        value: playground
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 13
+      include_when:
+        __all__:
+          leisure: swimming_pool
+          access: 'yes'
+      attributes:
+      - key: sort
+        value: 90
+      - key: type
+        value: swimming_pool
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 13
+      include_when:
+        amenity: school
+      attributes:
+      - key: sort
+        value: 85
+      - key: type
+        value: school
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 13
+      include_when:
+        amenity: kindergaren
+      attributes:
+      - key: sort
+        value: 80
+      - key: type
+        value: kindergaren
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 13
+      include_when:
+        amenity: ice_cream
+      attributes:
+      - key: sort
+        value: 63
+      - key: type
+        value: ice_cream
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 13
+      include_when:
+        shop: toys
+      attributes:
+      - key: sort
+        value: 70
+      - key: type
+        value: toys
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 13
+      include_when:
+        shop: books
+      attributes:
+      - key: sort
+        value: 65
+      - key: type
+        value: books
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 13
+      include_when:
+        shop: confectionery
+      attributes:
+      - key: sort
+        value: 60
+      - key: type
+        value: confectionery
+      - key: name
+    # Early High zoom
+    - source: osm
+      geometry: centroid
+      min_zoom: 12
+      include_when:
+        amenity: library
+      attributes:
+      - key: sort
+        value: 55
+      - key: type
+        value: library
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 12
+      include_when:
+        amenity: fire_station
+      attributes:
+      - key: sort
+        value: 50
+      - key: type
+        value: fire_station
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 11
+      include_when:
+        railway: station
+      attributes:
+      - key: sort
+        value: 45
+      - key: type
+        value: station
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 11
+      include_when:
+        tourism: museum
+      attributes:
+      - key: sort
+        value: 40
+      - key: type
+        value: museum
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 10
+      include_when:
+        tourism: zoo
+      attributes:
+      - key: sort
+        value: 35
+      - key: type
+        value: zoo
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 10
+      include_when:
+        tourism: theme_park
+      attributes:
+      - key: sort
+        value: 30
+      - key: type
+        value: theme_park
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 10
+      include_when:
+        tourism: aquarium
+      attributes:
+      - key: sort
+        value: 25
+      - key: type
+        value: aquarium
+      - key: name
+    # Mid zoom - cities
+    - source: osm
+      geometry: centroid
+      min_zoom: 6
+      max_zoom: 10
+      include_when:
+        place: city
+      attributes:
+      - key: sort
+        value: 20
+      - key: type
+        value: city
+      - key: name
+      - key: capital
+    # Low zoom - countries
+    - source: osm
+      geometry: centroid
+      min_zoom: 0
+      max_zoom: 6
+      include_when:
+        place: country
+      attributes:
+      - key: sort
+        value: 15
+      - key: type
+        value: country
+      - key: name
+      - key: ISO3166-1:alpha2 
+      - key: ISO3166-1
+      - key: country_code_iso3166_1_alpha_2
