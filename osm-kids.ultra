@@ -22,6 +22,8 @@ controls:
           <br>
           🚒 Fire Stations
           <br>
+          ♟️ Game Shops
+          <br>
           🍦 Ice Cream Shops
           <br>
           📙 Libraries
@@ -41,6 +43,8 @@ controls:
           🚂 Train Stations
           <br>
           🏛️ Museums
+          <br>
+          🕹️ Video Game Shops
           <br>
           🐯 Zoos
         </details>
@@ -118,6 +122,10 @@ style:
         - emoji:steam_locomotive
         - [ toys ]
         - emoji:teddy_bear
+        - [ games ]
+        - emoji:chess_pawn
+        - [ video_games ]
+        - emoji:joystick
         - [ books ]
         - emoji:green_book
         - [ confectionery ]

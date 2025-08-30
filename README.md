@@ -6,6 +6,7 @@ An [OpenStreetMap](https://openstreetmap.org)-powered map for kids! Featuring:
  * 📗 Book Shops
  * 🍬 Candy Shops
  * 🚒 Fire Stations
+ * ♟️ Game Shops
  * 🍦 Ice Cream Shops
  * 📙 Libraries
  * 📘 Little Libraries
@@ -16,6 +17,7 @@ An [OpenStreetMap](https://openstreetmap.org)-powered map for kids! Featuring:
  * 🧸 Toy Shops
  * 🚂 Train Stations
  * 🏛️ Museums
+ * 🕹️ Video Game Shops
  * 🐯 Zoos
 
 It is currently an [Ultra](https://overpass-ultra.us)-powered prototype.

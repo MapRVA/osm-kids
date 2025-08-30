@@ -85,6 +85,28 @@ layers:
       geometry: centroid
       min_zoom: 13
       include_when:
+        shop: video_games
+      attributes:
+      - key: sort
+        value: 72
+      - key: type
+        value: video_games
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 13
+      include_when:
+        shop: games
+      attributes:
+      - key: sort
+        value: 70
+      - key: type
+        value: games
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 13
+      include_when:
         shop: toys
       attributes:
       - key: sort
