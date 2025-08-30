@@ -96,7 +96,10 @@ layers:
       geometry: centroid
       min_zoom: 13
       include_when:
-        shop: books
+        __all__:
+          __not__:
+            books: [religion, erotic, academic, textbook, law, antiquarian, medicine]
+          shop: books
       attributes:
       - key: sort
         value: 65
@@ -153,6 +156,19 @@ layers:
       min_zoom: 11
       include_when:
         tourism: museum
+      attributes:
+      - key: sort
+        value: 96
+      - key: type
+        value: museum
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 11
+      include_when:
+        __all__:
+          tourism: museum
+          museum: children
       attributes:
       - key: sort
         value: 40
