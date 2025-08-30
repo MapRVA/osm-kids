@@ -4,6 +4,7 @@ An [OpenStreetMap](https://openstreetmap.org)-powered map for kids! Featuring:
 
  * 🐟 Aquariums
  * 📗 Book Shops
+ * 🌻 Botanic Gardens
  * 🍬 Candy Shops
  * 🚒 Fire Stations
  * ♟️ Game Shops

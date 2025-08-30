@@ -18,6 +18,8 @@ controls:
           <br>
           📗 Book Shops
           <br>
+          🌻 Botanic Gardens
+          <br>
           🍬 Candy Shops
           <br>
           🚒 Fire Stations
@@ -116,6 +118,8 @@ style:
         - emoji:tiger
         - aquarium
         - emoji:fish
+        - [ botanic_garden ]
+        - emoji:sunflower
         - [ museum ]
         - emoji:classical_building
         - [ station ]

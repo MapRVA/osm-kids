@@ -153,6 +153,19 @@ layers:
       - key: name
     - source: osm
       geometry: centroid
+      min_zoom: 11
+      include_when:
+        __all__:
+          leisure: garden
+          'garden:type': botanical
+      attributes:
+      - key: sort
+        value: 52
+      - key: type
+        value: botanic_garden
+      - key: name
+    - source: osm
+      geometry: centroid
       min_zoom: 12
       include_when:
         amenity: fire_station
