@@ -52,6 +52,17 @@ layers:
       geometry: centroid
       min_zoom: 13
       include_when:
+        amenity: kindergarten
+      attributes:
+      - key: sort
+        value: 86
+      - key: type
+        value: school
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 13
+      include_when:
         amenity: school
       attributes:
       - key: sort
