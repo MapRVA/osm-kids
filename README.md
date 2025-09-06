@@ -21,7 +21,7 @@ An [OpenStreetMap](https://openstreetmap.org)-powered map for kids! Featuring:
  * 🕹️ Video Game Shops
  * 🐯 Zoos
 
-At middle zoom levels it shows cities 🏙️, and at low zooms it shows countries 🏙️🇫🇷🇨🇲🇨🇳.
+At middle zoom levels it shows cities 🏙️, and at low zooms it shows countries 🇺🇸🇫🇷🇨🇲🇨🇳.
 
 ### View the map!
 
