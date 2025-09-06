@@ -12,7 +12,7 @@ controls:
     options:
       html: |
         <div class="infobox">
-        <h1>OSM Kids!</h1>
+        <h1>🗺️ OSM Kids!</h1>
         <details>
           <summary>Legend</summary>
           🐟 Aquariums
