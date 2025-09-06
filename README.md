@@ -25,9 +25,34 @@ At middle zoom levels it shows cities 🏙️, and at low zooms it shows countri
 
 ### View the map!
 
-https://dschep.github.io/osm-kids/
+https://osm.kids/
+
+
+### Build the map from the Ultra query
+```
+npm i
+npm run build
+```
 
 ### Build tiles
 ```
-docker run -v "$(pwd)":/data ghcr.io/onthegomap/planetiler:latest generate-custom --schema=/data/osm-kids.planetiler.yml
+npm run build:tiles
 ```
+
+If you need `sudo` to run docker:
+```
+npm run build:tiles:sudo
+```
+
+### Adding a new type of place to the map
+
+To add a new type of place:
+
+* Edit [`osm-kids.planetiler.yml`](./osm-kids.planetiler.yml) to add a secion in `features`.
+    * Use the `include_when` section to define what OSM objects to include
+    * Include a sprite attribute in the form `emoji:short_name` where `short_name` is an emoji
+      short name. See http://projects.iamcal.com/emoji-data/table.htm for short names.
+    * Choose `min_zoom` and `sort` that is appropriate.
+    * If it has a name, include the `- key: name` attribute,
+* Add it to this README
+* Update the legend in [`osm-kids.ultra`](./osm-kids.ultra)
