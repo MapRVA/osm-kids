@@ -4,4 +4,5 @@ node_modules/ dist/
 tile_weights.tsv.gz
 sources/
 node_modules/
-dist/
+dist/*
+!dist/favicon.png
