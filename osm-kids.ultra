@@ -78,7 +78,8 @@ style:
       text-halo-color: '#e8e5d8'
       text-halo-width: 2 
       text-justify: auto
-      text-radial-offset: 1
+      text-radial-offset: .75
+      text-size: 12
       text-optional: true
       text-variable-anchor:
         - left
@@ -105,7 +106,7 @@ style:
         - [ get, sprite ]
         - emoji:blue_book
         - .5
-        - 1
+        - .75
   extends: https://styles.trailsta.sh/maptiler-basic.json
 ---
 pmtiles://https://files.trailstash.net/osm-kids.pmtiles
