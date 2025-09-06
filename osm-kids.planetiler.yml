@@ -44,6 +44,19 @@ layers:
           access: 'yes'
       attributes:
       - key: sort
+        value: 91
+      - key: sprite
+        value: emoji:swimmer
+      - key: name
+    - source: osm
+      geometry: centroid
+      min_zoom: 13
+      include_when:
+        __all__:
+          leisure: sports_centre
+          sport: swimming
+      attributes:
+      - key: sort
         value: 90
       - key: sprite
         value: emoji:swimmer
