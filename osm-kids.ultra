@@ -88,8 +88,8 @@ style:
         - bottom-right
       icon-image:
         - match
-        - [get, type]
-        - country
+        - [get, sprite]
+        - 'emoji:flag-'
         - - image
           - - concat
             - 'emoji:flag-'
@@ -98,49 +98,11 @@ style:
                 - [ get, ISO3166-1:alpha2 ]
                 - [ get, ISO3166-1 ]
                 - [ get, country_code_iso3166_1_alpha_2 ]
-        - city
-        - emoji:cityscape
-        - [ school, kindergarten ]
-        - emoji:school
-        - fire_station
-        - emoji:fire_engine
-        - ice_cream
-        - emoji:icecream
-        - library
-        - emoji:orange_book
-        - theme_park
-        - emoji:ferris_wheel
-        - public_bookcase
-        - emoji:blue_book
-        - playground
-        - emoji:playground_slide
-        - zoo
-        - emoji:tiger
-        - aquarium
-        - emoji:fish
-        - [ botanic_garden ]
-        - emoji:sunflower
-        - [ museum ]
-        - emoji:classical_building
-        - [ station ]
-        - emoji:steam_locomotive
-        - [ toys ]
-        - emoji:teddy_bear
-        - [ games ]
-        - emoji:chess_pawn
-        - [ video_games ]
-        - emoji:joystick
-        - [ books ]
-        - emoji:green_book
-        - [ confectionery ]
-        - emoji:candy
-        - [ swimming_pool ]
-        - emoji:swimmer
-        - emoji:question
+        - [get, sprite]
       icon-size:
         - match
-        - [ get, type ]
-        - public_bookcase
+        - [ get, sprite ]
+        - emoji:blue_book
         - .5
         - 1
   extends: https://styles.trailsta.sh/maptiler-basic.json

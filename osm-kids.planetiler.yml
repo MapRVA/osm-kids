@@ -21,8 +21,8 @@ layers:
       attributes:
       - key: sort
         value: 100
-      - key: type
-        value: public_bookcase
+      - key: sprite
+        value: emoji:blue_book
     # Mid High zoom
     - source: osm
       geometry: centroid
@@ -32,8 +32,8 @@ layers:
       attributes:
       - key: sort
         value: 95
-      - key: type
-        value: playground
+      - key: sprite
+        value: moji:playground_slide
       - key: name
     - source: osm
       geometry: centroid
@@ -45,8 +45,8 @@ layers:
       attributes:
       - key: sort
         value: 90
-      - key: type
-        value: swimming_pool
+      - key: sprite
+        value: emoji:swimmer
       - key: name
     - source: osm
       geometry: centroid
@@ -56,8 +56,8 @@ layers:
       attributes:
       - key: sort
         value: 86
-      - key: type
-        value: school
+      - key: sprite
+        value: emoji:school
       - key: name
     - source: osm
       geometry: centroid
@@ -67,19 +67,8 @@ layers:
       attributes:
       - key: sort
         value: 85
-      - key: type
-        value: school
-      - key: name
-    - source: osm
-      geometry: centroid
-      min_zoom: 13
-      include_when:
-        amenity: kindergaren
-      attributes:
-      - key: sort
-        value: 80
-      - key: type
-        value: kindergaren
+      - key: sprite
+        value: emoji:school
       - key: name
     - source: osm
       geometry: centroid
@@ -89,8 +78,8 @@ layers:
       attributes:
       - key: sort
         value: 63
-      - key: type
-        value: ice_cream
+      - key: sprite
+        value: emoji:icecream
       - key: name
     - source: osm
       geometry: centroid
@@ -100,8 +89,8 @@ layers:
       attributes:
       - key: sort
         value: 72
-      - key: type
-        value: video_games
+      - key: sprite
+        value: emoji:joystick
       - key: name
     - source: osm
       geometry: centroid
@@ -111,8 +100,8 @@ layers:
       attributes:
       - key: sort
         value: 70
-      - key: type
-        value: games
+      - key: sprite
+        value: emoji:chess_pawn
       - key: name
     - source: osm
       geometry: centroid
@@ -122,8 +111,8 @@ layers:
       attributes:
       - key: sort
         value: 70
-      - key: type
-        value: toys
+      - key: sprite
+        value: emoji:teddy_bear
       - key: name
     - source: osm
       geometry: centroid
@@ -136,8 +125,8 @@ layers:
       attributes:
       - key: sort
         value: 65
-      - key: type
-        value: books
+      - key: sprite
+        value: emoji:green_book
       - key: name
     - source: osm
       geometry: centroid
@@ -147,8 +136,8 @@ layers:
       attributes:
       - key: sort
         value: 60
-      - key: type
-        value: confectionery
+      - key: sprite
+        value: emoji:candy
       - key: name
     # Early High zoom
     - source: osm
@@ -159,8 +148,8 @@ layers:
       attributes:
       - key: sort
         value: 55
-      - key: type
-        value: library
+      - key: sprite
+        value: emoji:orange_book
       - key: name
     - source: osm
       geometry: centroid
@@ -172,8 +161,8 @@ layers:
       attributes:
       - key: sort
         value: 52
-      - key: type
-        value: botanic_garden
+      - key: sprite
+        value: emoji:sunflower
       - key: name
     - source: osm
       geometry: centroid
@@ -183,8 +172,8 @@ layers:
       attributes:
       - key: sort
         value: 50
-      - key: type
-        value: fire_station
+      - key: sprite
+        value: emoji:fire_engine
       - key: name
     - source: osm
       geometry: centroid
@@ -194,8 +183,8 @@ layers:
       attributes:
       - key: sort
         value: 45
-      - key: type
-        value: station
+      - key: sprite
+        value: emoji:steam_locomotive
       - key: name
     - source: osm
       geometry: centroid
@@ -205,8 +194,8 @@ layers:
       attributes:
       - key: sort
         value: 96
-      - key: type
-        value: museum
+      - key: sprite
+        value: emoji:classical_building
       - key: name
     - source: osm
       geometry: centroid
@@ -218,8 +207,8 @@ layers:
       attributes:
       - key: sort
         value: 40
-      - key: type
-        value: museum
+      - key: sprite
+        value: emoji:classical_building
       - key: name
     - source: osm
       geometry: centroid
@@ -229,8 +218,8 @@ layers:
       attributes:
       - key: sort
         value: 35
-      - key: type
-        value: zoo
+      - key: sprite
+        value: emoji:tiger
       - key: name
     - source: osm
       geometry: centroid
@@ -240,8 +229,8 @@ layers:
       attributes:
       - key: sort
         value: 30
-      - key: type
-        value: theme_park
+      - key: sprite
+        value: emoji:ferris_wheel
       - key: name
     - source: osm
       geometry: centroid
@@ -251,8 +240,8 @@ layers:
       attributes:
       - key: sort
         value: 25
-      - key: type
-        value: aquarium
+      - key: sprite
+        value: emoji:fish
       - key: name
     # Mid zoom - cities
     - source: osm
@@ -260,12 +249,30 @@ layers:
       min_zoom: 6
       max_zoom: 10
       include_when:
-        place: city
+        __all__:
+          place: city
+          __not__:
+            capital: yes
+      attributes:
+      - key: sort
+        value: 21
+      - key: sprite
+        value: emoji:cityscape
+      - key: name
+      - key: capital
+    - source: osm
+      geometry: centroid
+      min_zoom: 6
+      max_zoom: 10
+      include_when:
+        __all__:
+          place: city
+          capital: yes
       attributes:
       - key: sort
         value: 20
-      - key: type
-        value: city
+      - key: sprite
+        value: emoji:cityscape
       - key: name
       - key: capital
     # Low zoom - countries
@@ -278,8 +285,8 @@ layers:
       attributes:
       - key: sort
         value: 15
-      - key: type
-        value: country
+      - key: sprite
+        value: emoji:flag-
       - key: name
       - key: ISO3166-1:alpha2 
       - key: ISO3166-1
