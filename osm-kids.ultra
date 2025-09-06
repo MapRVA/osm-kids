@@ -5,6 +5,7 @@ icon: https://osm.kids/favicon.png
 options: 
   hash: m
 type: vector
+querySources: []
 controls:
   - type: HTMLControl
     position: top-left
