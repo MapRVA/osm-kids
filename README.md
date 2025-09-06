@@ -21,7 +21,7 @@ An [OpenStreetMap](https://openstreetmap.org)-powered map for kids! Featuring:
  * 🕹️ Video Game Shops
  * 🐯 Zoos
 
-It is currently an [Ultra](https://overpass-ultra.us)-powered prototype.
+At middle zoom levels it shows cities 🏙️, and at low zooms it shows countries 🏙️🇫🇷🇨🇲🇨🇳.
 
 ### View the map!
 
