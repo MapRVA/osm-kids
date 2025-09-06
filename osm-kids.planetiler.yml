@@ -33,7 +33,7 @@ layers:
       - key: sort
         value: 95
       - key: sprite
-        value: moji:playground_slide
+        value: emoji:playground_slide
       - key: name
     - source: osm
       geometry: centroid
