@@ -6,62 +6,46 @@ options:
   hash: m
 type: vector
 querySources: []
+help: |
+  # 🗺️ OSM Kids!
+  An OpenStreetMap-powered map for kids
+  ## Legend
+  🐟 Aquariums
+  <br>
+  📗 Book Shops
+  <br>
+  🌻 Botanic Gardens
+  <br>
+  🍬 Candy Shops
+  <br>
+  🚒 Fire Stations
+  <br>
+  ♟️ Game Shops
+  <br>
+  🍦 Ice Cream Shops
+  <br>
+  📙 Libraries
+  <br>
+  <small>📘</small> Little Libraries
+  <br>
+  🛝 Playgrounds
+  <br>
+  🏊 Pools
+  <br>
+  🎡 Theme Parks
+  <br>
+  🏫 Schools
+  <br>
+  🧸 Toy Shops
+  <br>
+  🚂 Train Stations
+  <br>
+  🏛️ Museums
+  <br>
+  🕹️ Video Game Shops
+  <br>
+  🐯 Zoos
 controls:
-  - type: HTMLControl
-    position: top-left
-    options:
-      html: |
-        <div class="infobox">
-        <h1>🗺️ OSM Kids!</h1>
-        <details>
-          <summary>Legend</summary>
-          🐟 Aquariums
-          <br>
-          📗 Book Shops
-          <br>
-          🌻 Botanic Gardens
-          <br>
-          🍬 Candy Shops
-          <br>
-          🚒 Fire Stations
-          <br>
-          ♟️ Game Shops
-          <br>
-          🍦 Ice Cream Shops
-          <br>
-          📙 Libraries
-          <br>
-          <small>📘</small> Little Libraries
-          <br>
-          🛝 Playgrounds
-          <br>
-          🏊 Pools
-          <br>
-          🎡 Theme Parks
-          <br>
-          🏫 Schools
-          <br>
-          🧸 Toy Shops
-          <br>
-          🚂 Train Stations
-          <br>
-          🏛️ Museums
-          <br>
-          🕹️ Video Game Shops
-          <br>
-          🐯 Zoos
-        </details>
-        </div>
-      css: |
-        .infobox {
-          background: white;
-          padding: 1em;
-          margin: 1em;
-          pointer-events: all;
-        }
-        details { 
-          margin: 1em;
-        }
   - type: GeolocateControl
     options:
       positionOptions:
