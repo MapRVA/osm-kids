@@ -4,6 +4,8 @@ description: An OpenStreetMap-powered map for kids
 icon: https://osm.kids/favicon.png
 options: 
   hash: m
+  attributionControl:
+    compact: false
 type: vector
 querySources: []
 runButton: false
