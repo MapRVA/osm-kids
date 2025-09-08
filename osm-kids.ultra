@@ -6,6 +6,7 @@ options:
   hash: m
 type: vector
 querySources: []
+runButton: false
 help: |
   # 🗺️ OSM Kids!
   An OpenStreetMap-powered map for kids
